@@ -31,6 +31,12 @@ export default function CubeEntity({ data }: Props) {
                 ref={mesh}
                 onPointerOver={() => setHovered(true)}
                 onPointerOut={() => setHovered(false)}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    import("../../store/use-entities-store").then(({ useEntitiesStore }) => {
+                        useEntitiesStore.getState().selectEntity(data.id);
+                    });
+                }}
             >
                 <boxGeometry args={[1, 1, 1]} />
                 <meshStandardMaterial
@@ -42,7 +48,6 @@ export default function CubeEntity({ data }: Props) {
 
             <Billboard>
                 <a.group position-y={y} visible={opacity.to((o) => o > 0)}>
-                    <a.meshStandardMaterial transparent opacity={opacity} />
                     <Text
                         fontSize={0.25}
                         color="#ffffff"

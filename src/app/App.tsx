@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Scene from '../core/engine/scene'
 import { useEntitiesStore } from '../store/use-entities-store'
+import ControlPanel from '../ui/control-panel';
 
 function App() {
   const addEntity = useEntitiesStore((s) => s.addEntity);
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="w-full h-screen bg-gray-900 text-white">
       <Scene />
+      <ControlPanel />
     </div>
   )
 }

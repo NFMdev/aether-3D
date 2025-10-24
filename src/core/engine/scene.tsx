@@ -6,7 +6,9 @@ import useMockDataStream from "./use-mock-data-stream";
 export default function Scene() {
     useMockDataStream();
     return (
-        <Canvas camera={{ position: [3,3,3], fov:90}}>
+        <Canvas
+            camera={{ position: [3,3,3], fov:90}}
+        >
             <ambientLight intensity={0.5} />
             <directionalLight position={[2, 5, 2]} intensity={1} />
             <EntityManager />
