@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import EntityManager from "../entities/entity-manager";
 import useMockDataStream from "./use-mock-data-stream";
+import CameraController from "./camera-controller";
 
 export default function Scene() {
     useMockDataStream();
@@ -11,6 +12,7 @@ export default function Scene() {
         >
             <ambientLight intensity={0.5} />
             <directionalLight position={[2, 5, 2]} intensity={1} />
+            <CameraController />
             <EntityManager />
             <OrbitControls enableDamping />
             <Environment preset="city" />
