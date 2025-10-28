@@ -14,7 +14,7 @@ export default function CameraController() {
         selectedEntity.position[0] + 3,
         selectedEntity.position[1] + 2,
         selectedEntity.position[2] + 3
-    ] : [6, 4, 6];
+    ] : camera.position;
 
     const { pos } = useSpring({ pos: targetPosition, config: { tension: 80, friction: 14 } });
 

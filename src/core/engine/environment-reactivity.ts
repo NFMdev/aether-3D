@@ -3,7 +3,7 @@ import { useEntitiesStore } from "../../store/use-entities-store";
 import * as THREE from 'three';
 import { useEffect } from "react";
 
-export default function useEnvironmentReactivity() {
+export default function environmentReactivity() {
     const { scene } = useThree();
     const entities = useEntitiesStore((s) => s.entities);
 
@@ -40,4 +40,6 @@ export default function useEnvironmentReactivity() {
 
         return () => clearInterval(interval);
     }, [scene, entities]);
+
+    return null;
 }
