@@ -1,9 +1,9 @@
 import type { GeneratedSystem } from "../systems/system-generator";
-import type { GenerateWorld, PlacedSystem, WorldConfig } from "./types";
+import type { GeneratedWorld, PlacedSystem, WorldConfig } from "./types";
 
-export function composeWorld(config: WorldConfig, systems: GeneratedSystem[]): GenerateWorld {
-    const spacing = config.spacing ?? 12;
-    const radius = config.radius ?? 20;
+export function composeWorld(config: WorldConfig, systems: GeneratedSystem[]): GeneratedWorld {
+    const spacing = config.spacing ?? 1;
+    const radius = config.radius ?? 5;
     const rows = config.rows ?? 2;
 
     const placed: PlacedSystem[] = [];

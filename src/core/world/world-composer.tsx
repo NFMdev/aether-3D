@@ -1,11 +1,11 @@
-import type { GenerateWorld } from "./types";
+import type { GeneratedWorld } from "./types";
 import ProceduralSystem from "../systems/procedural-system";
 import type { JSX } from "react";
 
 type GroupProps = JSX.IntrinsicElements["group"];
 
 interface Props extends GroupProps {
-    world: GenerateWorld;
+    world: GeneratedWorld;
     label?: boolean;
 }
 

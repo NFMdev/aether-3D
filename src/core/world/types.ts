@@ -16,7 +16,7 @@ export interface PlacedSystem {
     position: [number, number, number];
 }
 
-export interface GenerateWorld {
+export interface GeneratedWorld {
     id: string;
     name: string;
     layout: WorldLayout;
