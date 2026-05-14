@@ -25,6 +25,7 @@ import WorldEvolution from "./world-evolution";
 
 import { useWorldStore } from "../../store/use-world-store";
 import { useWorldActivity } from "../../store/use-world-activity";
+import CameraController from "./camera-controller";
 
 export default function Scene() {
     // Zustand world manager
@@ -104,6 +105,7 @@ export default function Scene() {
             <EnvironmentReactivity />
             <WorldEvolution />
             <CameraTransition />
+            <CameraController />
 
             {/* Conditional rendering: Galaxy - World */}
             {world ? (

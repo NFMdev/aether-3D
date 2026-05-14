@@ -34,7 +34,6 @@ export default function CameraController() {
 
         const p = pos.get() as number[];
         camera.position.set(p[0], p[1], p[2]);
-        camera.lookAt(...selectedEntity.position)
     });
 
     return null;
